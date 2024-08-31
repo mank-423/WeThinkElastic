@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  @apply font-sans;
+  background-color: #151414;
+  overflow-x: hidden;
+}
+
+#part-2 h1 {
+  color: #E7CEB0;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+#part-2 h1:hover {
+  color: #E07E3D;
+}
+
+.different-font{
+  font-family: "Frank Ruhl Libre", serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Only necessary with horizontal scrolling */
+html[data-scroll-orientation="horizontal"] {
+  body {
+      width: fit-content;
+  }
+  [data-scroll-container] {
+      display: flex;
+  }
+}
+
