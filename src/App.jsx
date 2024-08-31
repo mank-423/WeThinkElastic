@@ -7,6 +7,8 @@ import Collage from './components/collage/Collage'
 import Parallax from './components/Prallax/Parallax'
 import LocomotiveScroll from 'locomotive-scroll';
 import Brands from './components/Brands/Brands'
+import Business from './components/Business/Business'
+import Footer from './components/Footer/Footer'
 
 const locomotiveScroll = new LocomotiveScroll();
 
@@ -21,6 +23,8 @@ const App = () => {
       <Collage />
       <Parallax />
       <Brands />
+      <Business />
+      <Footer />
     </div>
   )
 }
