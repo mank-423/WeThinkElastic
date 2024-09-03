@@ -36,7 +36,7 @@ const Parallax = () => {
 
 
     return (
-        <section className='bg-[#9AC1CB] pl-5 py-20 pr-[-10]' id='parallax'>
+        <section className='bg-[#9AC1CB] pl-5 py-20 pr-[-20]' id='parallax'>
             <div id='parallax' className='leading-none'>
                 <h1 id='expertises' className='text-[500px] font-[500] text-[#151414] tracking-tighter'>EXPERTISES</h1>
             </div>
