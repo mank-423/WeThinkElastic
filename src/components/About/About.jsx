@@ -12,8 +12,8 @@ const About = () => {
       scrollTrigger: {
         trigger: "#part-1-text",
         scroller: "body",
-        start: "top 60%",
-        end: "top -10%",
+        start: "top 50%",
+        end: "end end",
         scrub: true
       }
     })
@@ -22,8 +22,8 @@ const About = () => {
       scrollTrigger: {
         trigger: "#part-1-text",
         scroller: "body",
-        start: "top 70%",
-        end: "end end",
+        start: "top 50%",
+        end: "end",
         scrub: true
       }
     })
@@ -58,8 +58,8 @@ const About = () => {
 
     gsap.from("#last-info", {
       opacity: 0,
-      duration: 2,
-      delay: 1,
+      duration: 1,
+      delay: 0.5,
       scrollTrigger: {
         trigger: "#last-info",
         scroller: "body",
