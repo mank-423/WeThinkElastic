@@ -17,37 +17,37 @@ const App = () => {
     window.scrollTo(0, 0);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentY = window.scrollY;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentY = window.scrollY;
 
-      if (currentY > lastY) {
-        gsap.to('nav', {
-          y: 0, 
-          opacity: 1,
-          duration: 1.2,
-          ease: 'power1.out',
-        });
-        setIsFixed(false); 
-      } else {
-        setIsFixed(true); 
-        gsap.to('nav', {
-          y: 0, 
-          opacity: 1,
-          duration: 1.2,
-          ease: 'power1.out',
-        });
-      }
+  //     if (currentY > lastY) {
+  //       gsap.to('nav', {
+  //         y: 0, 
+  //         opacity: 1,
+  //         duration: 1.2,
+  //         ease: 'power1.out',
+  //       });
+  //       setIsFixed(false); 
+  //     } else {
+  //       setIsFixed(true); 
+  //       gsap.to('nav', {
+  //         y: 0, 
+  //         opacity: 1,
+  //         duration: 1.2,
+  //         ease: 'power1.out',
+  //       });
+  //     }
 
-      setLastY(currentY);
-    };
+  //     setLastY(currentY);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [lastY]);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [lastY]);
 
   return (
     <div>
