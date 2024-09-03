@@ -1,13 +1,47 @@
+import { useGSAP } from '@gsap/react'
 import React from 'react'
+import ScrollTrigger from 'gsap/ScrollTrigger'
+import gsap from 'gsap'
 
 const Parallax = () => {
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    useGSAP(()=>{
+        gsap.to("#expertises", {
+            transform: "translateX(-110%)",
+            duration: 3,
+            scrollTrigger: {
+                trigger: "#parallax",
+                scroller: "body",
+                start: "top 0%",
+                end: "top -100%",
+                pin: true,
+                scrub: true,
+            }
+        })
+
+        gsap.from("#column-1", {
+            opacity: 0,
+            duration: 2,
+            scrollTrigger: {
+              trigger: "#list-items-parallax",
+              scroller: "body",
+              start: "top 70%", 
+              end: "top 20%",   
+              scrub: true,    
+            },
+        })
+    }, [])
+
+
     return (
-        <section className='bg-[#9AC1CB]'>
+        <section className='bg-[#9AC1CB] pl-5 py-20 pr-[-10]' id='parallax'>
             <div id='parallax' className='leading-none'>
-                <h1 className='text-[500px] font-[500] text-[#151414] tracking-tighter'>EXPERTISES</h1>
+                <h1 id='expertises' className='text-[500px] font-[500] text-[#151414] tracking-tighter'>EXPERTISES</h1>
             </div>
 
-            <div className='flex items-start justify-around p-10'>
+            <div className='flex items-start justify-around p-10' id="list-items-parallax">
 
                 <div id="column1">
                     <h1 className='text-[#151414] text-2xl font-[500]'>STRATEGY & IDEAS</h1>
