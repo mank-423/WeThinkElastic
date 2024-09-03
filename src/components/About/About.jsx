@@ -12,8 +12,8 @@ const About = () => {
       scrollTrigger: {
         trigger: "#part-1-text",
         scroller: "body",
-        start: "top 20%",
-        end: "top 0",
+        start: "top 60%",
+        end: "top -10%",
         scrub: true
       }
     })
@@ -22,44 +22,51 @@ const About = () => {
       scrollTrigger: {
         trigger: "#part-1-text",
         scroller: "body",
-        start: "top 50%",
-        end: "top 0",
+        start: "top 70%",
+        end: "end end",
         scrub: true
       }
     })
 
     tl2.from(".left1", {
       x: -400,
-      duration: 1,
+      duration: 3,
       opacity: 0,
       delay:0.5
-    },"anim1")
+    })
 
     tl.from(".right1", {
       x: 400,
-      duration: 1.2,
+      duration: 3,
       opacity: 0,
-      delay:0.5,
-    }, "anim2")
+      delay:1,
+    })
 
     tl2.from(".left2", {
       x: -400,
-      duration: 1,
+      duration: 3,
       opacity: 0,
-      delay:0.5
+      delay:1.5
     },"anim1")
 
     tl.from(".right2", {
       x: 400,
-      duration: 1.2,
+      duration: 3,
       opacity: 0,
-      delay:0.5,
+      delay:2,
     }, "anim2")
 
-    tl.from("#last-info", {
+    gsap.from("#last-info", {
       opacity: 0,
-      duration: 1,
-      delay: 0.7,
+      duration: 2,
+      delay: 1,
+      scrollTrigger: {
+        trigger: "#last-info",
+        scroller: "body",
+        start: "top 50%",
+        end: "top 0",
+        scrub: true
+      }
     })
 
   }, []);

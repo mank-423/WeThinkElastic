@@ -1,8 +1,10 @@
 import { useGSAP } from '@gsap/react'
 import { gsap } from 'gsap';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Collage = () => {
+
+    const [projectHover, setProjectHover] = useState(false);
 
     useGSAP(() => {
         gsap.to('#rotate-text', {
@@ -20,10 +22,17 @@ const Collage = () => {
         }
     }, []);
 
+    const handleMouseOverProject = () => {
+        setProjectHover(!projectHover);
+    }
+
+    const handleMouseLeave = () => {
+        setProjectHover(false);
+    }
+
     return (
         <div>
             <section className='relative pb-32'>
-
                 <div id="projects-container" className='absolute right-10'>
                     <div className='relative'>
                         <div id='rotate-text'>
@@ -33,7 +42,7 @@ const Collage = () => {
                     </div>
                 </div>
 
-                <div id='project-1' className='mt-8 p-10 pt-32'>
+                <div id='project' className={`mt-8 p-10 pt-32`} onMouseOver={handleMouseOverProject} onMouseLeave={handleMouseLeave}>
                     <video src="https://wethinkelastic.com/assets/videos/thumnail-IEC.mp4#t=0.1" autoPlay loop muted height={540} width={540}>
                     </video>
                     <div className='text-white'>
@@ -42,7 +51,7 @@ const Collage = () => {
                     </div>
                 </div>
 
-                <div id="project-3" className='absolute right-10 top-[30%]'>
+                <div id="project" className='absolute right-10 top-[30%]'>
                     <img src="https://wethinkelastic.com/assets/images/thumbnail-white-coffee-b1aada7092b251dc.webp" alt="" height={450} width={450} />
                     <div className='text-white'>
                         <h1>WHITE COFFEES</h1>
@@ -50,7 +59,7 @@ const Collage = () => {
                     </div>
                 </div>
 
-                <div id="project-4" className='mt-8 p-10 pt-32'>
+                <div id="project" className='mt-8 p-10 pt-32'>
                     <video src="https://wethinkelastic.com/assets/videos/thumnail-beev.mp4#t=0.1" autoPlay loop muted height={340} width={440}>
                     </video>
                     <div className='text-white'>
@@ -60,7 +69,7 @@ const Collage = () => {
                 </div>
 
 
-                <div id="project-5" className='absolute right-10 top-[60%]'>
+                <div id="project" className='absolute right-10 top-[60%]'>
                     <img src="https://wethinkelastic.com/assets/images/thumbnail-peugeot-ac01e927d1befcd7.webp " alt="" height={550} width={550} />
                     <div className='text-white'>
                         <h1>WHITE COFFEES</h1>
@@ -70,7 +79,7 @@ const Collage = () => {
             </section>
 
             <div className='flex justify-center items-center'>
-                <div id='project-6'>
+                <div id='project'>
                     <img src="https://wethinkelastic.com/assets/images/thumbnail-kreme-47f2f7370631b92f.webp" alt="" height={750} width={750} />
                     <div className='text-white'>
                         <h1>KREME</h1>

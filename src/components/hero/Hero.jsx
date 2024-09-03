@@ -38,7 +38,6 @@ const Hero = ({ isFixed }) => {
         tl.to("#video-slider > div", {
             width: "100%",
             duration: 1.5,
-            delay: 0.8,
             scrollTrigger: {
                 trigger: "#video-slider",
                 start: "top 90%", 
