@@ -28,11 +28,19 @@ const Hero = ({ isFixed }) => {
             ease: "circ.out",
         });
 
-        tl.from("#text-small", {
+        tl.to("#text-small", {
             opacity: 0,
             duration: 1,
             delay: 1,
             stagger: 0.5,
+            scrollTrigger: {
+                trigger: "#text-small",
+                scroller: "body",
+                start: "top 30%", 
+                end: "top 20%", 
+                markers: true,
+                scrub: true,    
+            },
         });
 
         tl.to("#video-slider > div", {
@@ -56,7 +64,7 @@ const Hero = ({ isFixed }) => {
                 hello
             </h1>
 
-            <div id='text-small' className='w-[40%] text-[40px] font-extralight leading-none'>
+            <div id='text-small' className='w-[40%] text-[40px] font-extralight leading-none p-10 mb-20'>
                 <h1 className='flex justify-center items-center text-[#F3C77C]'>
                     WE'RE THE SAME
                 </h1>
@@ -65,7 +73,7 @@ const Hero = ({ isFixed }) => {
                 </h1>
             </div>
 
-            <div id='video-slider' className='flex justify-center items-center  h-[100vh]'>
+            <div id='video-slider' className='flex justify-center items-center h-[80vh]'>
                 <div className='w-1/2'>
                     <video id="video-slider" autoPlay loop muted>
                         <source src={firstVideo} type="video/mp4" />

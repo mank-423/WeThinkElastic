@@ -64,7 +64,7 @@ const About = () => {
 
 
   return (
-    <section className='text-[#E7CFB1] font-[500] leading-none tracking-tighter flex flex-col justify-center items-center text-[180px] py-10'>
+    <section className='text-[#E7CFB1] font-[500] leading-none tracking-tighter flex flex-col justify-center items-center text-[180px] py-10 mt-20'>
 
       <div id="part-1-text" className='flex flex-col'>
         <h1 className='left1'>
