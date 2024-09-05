@@ -29,7 +29,7 @@ const Parallax = () => {
         </h1>
       </div>
 
-      <div className='flex items-start justify-around p-10' id="list-items-parallax">
+      <div className='flex items-start justify-around p-10 mt-20' id="list-items-parallax">
         <div id="column1">
           <h1 className='text-[#151414] text-2xl font-[500]'>STRATEGY & IDEAS</h1>
           <ul className='text-lg text-[#383737] font-[400]'>

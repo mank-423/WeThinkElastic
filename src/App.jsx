@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import gsap from 'gsap';
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/hero/Hero';
@@ -8,10 +8,12 @@ import Parallax from './components/Prallax/Parallax';
 import Brands from './components/Brands/Brands';
 import Business from './components/Business/Business';
 import Footer from './components/Footer/Footer';
+import { useGSAP } from '@gsap/react';
 
 const App = () => {
   const [lastY, setLastY] = useState(0);
   const [isFixed, setIsFixed] = useState(false);
+  const cursorRef = useRef();
 
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -49,8 +51,33 @@ const App = () => {
   //   };
   // }, [lastY]);
 
+  useEffect(() => {
+    // Handle cursor movement
+    const handleMouseMove = (e) => {
+      gsap.to(cursorRef.current, {
+        x: e.clientX - cursorRef.current.clientWidth / 2,
+        y: e.clientY - cursorRef.current.clientHeight / 2,
+        duration: 0.2,
+        delay: 0.1,
+        ease: 'back.out',
+      });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   return (
     <div>
+      <div
+        id='cursor'
+        ref={cursorRef}
+        className='fixed w-5 h-5 bg-gray-100/60 rounded-full pointer-events-none z-10'
+      >
+      </div>
       <Navbar isFixed={isFixed} />
       <Hero isFixed={isFixed}/>
       <About />
