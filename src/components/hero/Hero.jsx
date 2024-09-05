@@ -37,8 +37,7 @@ const Hero = ({ isFixed }) => {
                 trigger: "#text-small",
                 scroller: "body",
                 start: "top 30%", 
-                end: "top 20%", 
-                markers: true,
+                end: "top 20%",
                 scrub: true,    
             },
         });
