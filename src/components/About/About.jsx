@@ -12,49 +12,40 @@ const About = () => {
       scrollTrigger: {
         trigger: "#part-1-text",
         scroller: "body",
-        start: "top 50%",
-        end: "end end",
-        scrub: true
-      }
-    })
-
-    var tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#part-1-text",
-        scroller: "body",
-        start: "top 50%",
+        start: "top+=30% 60%",
+        // markers: true,
         end: "end",
         scrub: true
       }
     })
 
-    tl2.from(".left1", {
-      x: -400,
+    tl.from(".left1", {
+      y: 100,
       duration: 3,
       opacity: 0,
-      delay:0.5
+      delay: 0.5
     })
 
     tl.from(".right1", {
-      x: 400,
+      y: 100,
       duration: 3,
       opacity: 0,
-      delay:1,
+      delay: 1.5,
     })
 
-    tl2.from(".left2", {
-      x: -400,
+    tl.from(".left2", {
+      y: 100,
       duration: 3,
       opacity: 0,
-      delay:1.5
-    },"anim1")
+      delay: 2
+    })
 
     tl.from(".right2", {
-      x: 400,
+      y: 100,
       duration: 3,
       opacity: 0,
-      delay:2,
-    }, "anim2")
+      delay: 2.5,
+    })
 
     gsap.from("#last-info", {
       opacity: 0,
@@ -73,7 +64,7 @@ const About = () => {
 
 
   return (
-    <section className='text-[#E7CFB1] font-[500] leading-none tracking-tighter flex flex-col justify-center items-center text-[180px] py-10 relative'>
+    <section className='text-[#E7CFB1] font-[500] leading-none tracking-tighter flex flex-col justify-center items-center text-[180px] py-10'>
 
       <div id="part-1-text" className='flex flex-col'>
         <h1 className='left1'>
@@ -93,12 +84,13 @@ const About = () => {
         <h1 className='right2'>
           PLUS FAST
         </h1>
-        <div className="text-[18px] absolute tracking-normal font-[300] right-4 bottom-20" id='last-info'>
-          <p>THANKS TO A STORYTELLING</p>
-          <p>IMPACTING AN IDENTITY</p>
-          <p>STRONG VISUAL OF INTERFACES</p>
-          <p>ULTRA-FLUID DIGITAL</p>
-        </div>
+      </div>
+
+      <div className="text-[18px] tracking-normal font-[300] right-4 bottom-20" id='last-info'>
+        <p>THANKS TO A STORYTELLING</p>
+        <p>IMPACTING AN IDENTITY</p>
+        <p>STRONG VISUAL OF INTERFACES</p>
+        <p>ULTRA-FLUID DIGITAL</p>
       </div>
 
     </section>

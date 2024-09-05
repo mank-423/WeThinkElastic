@@ -12,7 +12,6 @@ html, body{
 body {
   @apply font-sans;
   background-color: #151414;
-  overflow-x: hidden;
 }
 
 #part-2 h1 {

@@ -8,9 +8,9 @@ const Business = () => {
     gsap.registerPlugin(ScrollTrigger)
 
     useGSAP(() => {
-        gsap.from("#text", {
+        gsap.from("#text h1", {
             opacity: 0,
-            duration: 1,
+            duration: 2,
             delay: 0.7,
             stagger: 0.4,
             scrollTrigger: {
@@ -18,7 +18,7 @@ const Business = () => {
                 scroller: "body",
                 start: "top 50%",
                 end: "top 40%",
-                scrub: true
+                scrub: true,
             },
         })
     })

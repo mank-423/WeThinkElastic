@@ -40,6 +40,7 @@ const Hero = ({ isFixed }) => {
             duration: 1.5,
             scrollTrigger: {
                 trigger: "#video-slider",
+                scroller: "body",
                 start: "top 90%", 
                 end: "top 20%",   
                 scrub: true,      
@@ -64,7 +65,7 @@ const Hero = ({ isFixed }) => {
                 </h1>
             </div>
 
-            <div id='video-slider' className='flex justify-center items-center'>
+            <div id='video-slider' className='flex justify-center items-center  h-[100vh]'>
                 <div className='w-1/2'>
                     <video id="video-slider" autoPlay loop muted>
                         <source src={firstVideo} type="video/mp4" />

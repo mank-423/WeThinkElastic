@@ -93,7 +93,7 @@ const Collage = () => {
                 </div>
             </section>
 
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center pb-32">
                 <div id="project">
                     <img
                         src="https://wethinkelastic.com/assets/images/thumbnail-kreme-47f2f7370631b92f.webp"
