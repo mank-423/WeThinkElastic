@@ -75,17 +75,17 @@ const App = () => {
       <div
         id='cursor'
         ref={cursorRef}
-        className='fixed w-5 h-5 bg-gray-100/60 rounded-full pointer-events-none z-10'
+        className='fixed w-5 h-5 bg-white rounded-full pointer-events-none z-10'
       >
       </div>
       <Navbar isFixed={isFixed} />
       <Hero isFixed={isFixed}/>
-      <About />
+      {/* <About />
       <Collage />
       <Parallax />
       <Brands />
       <Business />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };

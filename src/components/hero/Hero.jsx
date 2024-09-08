@@ -36,9 +36,9 @@ const Hero = ({ isFixed }) => {
             scrollTrigger: {
                 trigger: "#text-small",
                 scroller: "body",
-                start: "top 30%", 
+                start: "top 30%",
                 end: "top 20%",
-                scrub: true,    
+                scrub: true,
             },
         });
 
@@ -48,9 +48,9 @@ const Hero = ({ isFixed }) => {
             scrollTrigger: {
                 trigger: "#video-slider",
                 scroller: "body",
-                start: "top 90%", 
-                end: "top 20%",   
-                scrub: true,      
+                start: "top 90%",
+                end: "top 20%",
+                scrub: true,
             },
         });
 
@@ -59,21 +59,30 @@ const Hero = ({ isFixed }) => {
 
     return (
         <section id='hero' className={`flex flex-col items-center justify-center ${isFixed ? 'mt-20' : ''}`}>
-            <h1 id='text-header' className='text-[#F3C77C] text-[500px] font-[1000] leading-none tracking-tighter'>
+            <h1
+                id="text-header"
+                className="text-[#F3C77C] text-[160px] md:text-[300px] lg:text-[400px] xl:text-[500px] font-[1000] leading-none tracking-tighter"
+            >
                 hello
             </h1>
 
-            <div id='text-small' className='w-[40%] text-[40px] font-extralight leading-none p-10 mb-20'>
-                <h1 className='flex justify-center items-center text-[#F3C77C]'>
+            <div
+                id="text-small"
+                className="w-[80%] md:w-[60%] lg:w-[50%] text-[30px] md:text-[40px] font-extralight leading-none p-6 md:p-10 mb-10 md:mb-20"
+            >
+                <h1 className="flex justify-center items-center text-[#F3C77C]">
                     WE'RE THE SAME
                 </h1>
-                <h1 className='flex justify-center items-center text-[#F3C77C] pb-10'>
+                <h1 className="flex justify-center items-center text-[#F3C77C] pb-6 md:pb-10">
                     THINK ELASTIC
                 </h1>
             </div>
 
-            <div id='video-slider' className='flex justify-center items-center h-[80vh]'>
-                <div className='w-1/2'>
+            <div
+                id="video-slider"
+                className="flex justify-center items-center h-[60vh] md:h-[70vh] lg:h-[80vh]"
+            >
+                <div className="w-full md:w-1/2">
                     <video id="video-slider" autoPlay loop muted>
                         <source src={firstVideo} type="video/mp4" />
                     </video>
