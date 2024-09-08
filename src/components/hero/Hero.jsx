@@ -80,7 +80,7 @@ const Hero = ({ isFixed }) => {
 
             <div
                 id="video-slider"
-                className="flex justify-center items-center h-[60vh] md:h-[70vh] lg:h-[80vh]"
+                className="flex justify-center items-center h-[40vh] md:h-[70vh] lg:h-[80vh]"
             >
                 <div className="w-full md:w-1/2">
                     <video id="video-slider" autoPlay loop muted>

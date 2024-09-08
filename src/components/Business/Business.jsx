@@ -24,9 +24,12 @@ const Business = () => {
     })
 
     return (
-        <section id='business' className='bg-[#E7CFB1] p-20'>
-            <div id="text" className='flex flex-col justify-center items-center leading-none tracking-tighter text-[70px] text-[#151414]'>
-                <h1 className=''>YOU HAVE A BEAUTIFUL</h1>
+        <section id='business' className='bg-[#E7CFB1] p-10 lg:p-20'>
+            <div
+                id="text"
+                className='flex flex-col lg:justify-center lg:items-center xl:justify-center xl:items-center leading-none tracking-tighter text-[40px] lg:text-[70px] text-[#151414]'
+            >
+                <h1>YOU HAVE A BEAUTIFUL</h1>
                 <h1>PROJECT? LET'S TALK</h1>
                 <h1>AROUND ONE</h1>
                 <h1>GOOD COFFEE</h1>

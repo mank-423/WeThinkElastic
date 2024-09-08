@@ -64,7 +64,7 @@ const About = () => {
 
 
   return (
-    <section className='text-[#E7CFB1] font-[500] leading-none tracking-tighter flex flex-col justify-center items-center text-[180px] py-10 mt-20'>
+    <section className='text-[#E7CFB1] font-[500] leading-none tracking-tighter flex flex-col justify-center items-center text-[60px] md:text-[120px] lg:text-[180px] py-6 md:py-10 mt-10 md:mt-20'>
 
       <div id="part-1-text" className='flex flex-col'>
         <h1 className='left1'>
@@ -73,20 +73,17 @@ const About = () => {
         <h1 className='right1'>THE BRANDS</h1>
       </div>
 
-      <div id='part-2' className='ml-12'>
+      <div id='part-2' className='ml-6 md:ml-12'>
         <h2 className="left2">
           <span className='different-font'>to </span> GROW
         </h2>
       </div>
 
-
-      <div id="part-3" className='flex flex-row justify-start items-start mr-24'>
-        <h1 className='right2'>
-          PLUS FAST
-        </h1>
+      <div id="part-3" className='flex flex-row justify-start items-start mr-12 md:mr-24'>
+        <h1 className='right2'>PLUS FAST</h1>
       </div>
 
-      <div className="text-[18px] tracking-normal font-[300] right-4 bottom-20" id='last-info'>
+      <div className="text-[12px] md:text-[18px] tracking-normal font-[300] right-4 bottom-20" id='last-info'>
         <p>THANKS TO A STORYTELLING</p>
         <p>IMPACTING AN IDENTITY</p>
         <p>STRONG VISUAL OF INTERFACES</p>

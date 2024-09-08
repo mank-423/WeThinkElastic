@@ -80,12 +80,12 @@ const App = () => {
       </div>
       <Navbar isFixed={isFixed} />
       <Hero isFixed={isFixed}/>
-      {/* <About />
+      <About />
       <Collage />
       <Parallax />
       <Brands />
       <Business />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };

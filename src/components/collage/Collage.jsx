@@ -32,7 +32,7 @@ const Collage = () => {
 
     return (
         <div>
-            <section className='relative pb-32'>
+            <section className='relative xl:pb-32 lg:pb-32 pb-12'>
                 <div id="projects-container" className='absolute right-10'>
                     <div className='relative'>
                         <div id='rotate-text'>
@@ -45,12 +45,12 @@ const Collage = () => {
                     </div>
                 </div>
 
-                <div id='project' className={`mt-8 p-10 pt-32 transition-transform duration-300 hover:scale90`}
+                <div id='project' className={`xl:mt-8 lg:mt-8 mt-8 p-10 pt-32 transition-transform duration-300 hover:scale90`}
                     onMouseOver={handleMouseOverProject} onMouseLeave={handleMouseLeave}>
                     <video
                         src="https://wethinkelastic.com/assets/videos/thumnail-IEC.mp4#t=0.1"
                         autoPlay loop muted height={540} width={540}
-                        className='transition-transform duration-500 transform scale-100 hover:scale-95 hover:-translate-y-1'
+                        className='transition-transform duration-500 transform scale-100 hover:scale-95 hover:-translate-y-1 mt-20 lg:mt-1 xl:mt-1'
                     >
                     </video>
                     <div className='text-white'>
@@ -59,7 +59,7 @@ const Collage = () => {
                     </div>
                 </div>
 
-                <div id="project" className='absolute right-10 top-[30%]'>
+                <div id="project" className='xl:absolute xl:right-10 xl:top-[30%] lg:absolute lg:right-10 lg:top-[30%] md:absolute md:right-10 md:top-[30%]'>
                     <img src="https://wethinkelastic.com/assets/images/thumbnail-white-coffee-b1aada7092b251dc.webp" 
                     alt="" height={450} width={450} 
                     className='transition-transform duration-500 transform scale-100 hover:scale-95 hover:-translate-y-1'
@@ -70,7 +70,7 @@ const Collage = () => {
                     </div>
                 </div>
 
-                <div id="project" className='mt-8 p-10 pt-32'>
+                <div id="project" className='xl:mt-8 xl:p-10 xl:pt-32 lg:mt-8 lg:p-10 lg:pt-32 mt-2 py-10'>
                     <video src="https://wethinkelastic.com/assets/videos/thumnail-beev.mp4#t=0.1" 
                     autoPlay loop muted height={340} width={440} 
                     className='transition-transform duration-500 transform scale-100 hover:scale-95 hover:-translate-y-1'>
@@ -82,7 +82,7 @@ const Collage = () => {
                 </div>
 
 
-                <div id="project" className='absolute right-10 top-[60%]'>
+                <div id="project" className='xl:absolute xl:right-10 xl:top-[60%] lg:absolute lg:right-10 lg:top-[60%] md:absolute md:right-10 md:top-[60%]'>
                     <img src="https://wethinkelastic.com/assets/images/thumbnail-peugeot-ac01e927d1befcd7.webp "
                         alt="" height={550} width={550}
                         className='transition-transform duration-500 transform scale-100 hover:scale-95 hover:-translate-y-1' />
@@ -93,7 +93,7 @@ const Collage = () => {
                 </div>
             </section>
 
-            <div className="flex justify-center items-center pb-32">
+            <div className="flex justify-center items-center pb-12 xl:pb-32 lg:pb-32">
                 <div id="project">
                     <img
                         src="https://wethinkelastic.com/assets/images/thumbnail-kreme-47f2f7370631b92f.webp"
